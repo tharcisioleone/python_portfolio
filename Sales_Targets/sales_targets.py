@@ -4,8 +4,8 @@
 ## Maschine Learning using openpyxl and twilio.
 # 0. Importing Libraries.
 # 1. Opening the six files in Excel containing the sales values per salesperson.
-# 2. Evaluating the values of sales
-# --> If the value is higher than 55.000, then send SMS reporting the month, salesperson and value.
+# 2. Evaluating the values of sales.
+# 3. Sending SMS with the message of target achieving reporting the month, salesperson and value.
 
 
 # 0. Importing Libraries.
@@ -23,3 +23,6 @@ for months in list_months:
         salesperson = table_sales.loc[table_sales['Values'] > 55000, 'Salesperson'].values[0]
         values = table_sales.loc[table_sales['Values'] > 55000, 'Values'].values[0]
         print(f'In month {months} the target was achieved. Salesperson: {salesperson}. Value: {values}.')
+
+
+# 3. Sending SMS with the message of target achieving reporting the month, salesperson and value.
