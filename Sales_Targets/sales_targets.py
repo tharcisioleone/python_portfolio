@@ -10,6 +10,7 @@
 
 # 0. Importing Libraries.
 import pandas as pd
+from twilio.rest import Client
 
 
 # 1. Opening the six files in Excel containing the sales values per salesperson.
@@ -26,3 +27,21 @@ for months in list_months:
 
 
 # 3. Sending SMS with the message of target achieving reporting the month, salesperson and value.
+# See: https://www.twilio.com/docs/libraries/python
+
+# Copy and paste from homepage
+# from twilio.rest import Client
+
+# Your Account SID from twilio.com/console
+account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# Your Auth Token from twilio.com/console
+auth_token  = "your_auth_token"
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+15558675309",
+    from_="+15017250604",
+    body="Hello from Python!")
+
+print(message.sid)
