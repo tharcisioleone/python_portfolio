@@ -16,8 +16,8 @@ import pandas as pd
 list_months = ['january', 'february', 'march', 'april', 'may', 'june']
 
 for months in list_months:
-    print(months)
+    #print(months)
     table_sales = pd.read_excel(f'{months}.xlsx')
-    print(table_sales)
+    #print(table_sales)
     if (table_sales['Values'] > 55000).any():
         print(f'In month {months} the target was achieved.')
