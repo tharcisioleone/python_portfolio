@@ -32,16 +32,15 @@ for months in list_months:
 # Copy and paste from homepage
 # from twilio.rest import Client
 
-# Your Account SID from twilio.com/console
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+# My Account SID from twilio.com/console
+account_sid = "AC2a465d6668cd63f1d30b7ac11f206aa8"
 # Your Auth Token from twilio.com/console
-auth_token  = "your_auth_token"
-
+auth_token  = "25ce7ce97055f1f5e21af2e4e1bda957"
 client = Client(account_sid, auth_token)
 
 message = client.messages.create(
-    to="+15558675309",
-    from_="+15017250604",
+    to="+4917681703460",
+    from_="+19707143233",
     body="Hello from Python!")
 
 print(message.sid)
