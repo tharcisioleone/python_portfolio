@@ -19,5 +19,7 @@ for months in list_months:
     #print(months)
     table_sales = pd.read_excel(f'{months}.xlsx')
     #print(table_sales)
-    if (table_sales['Values'] > 55000).any():
-        print(f'In month {months} the target was achieved.')
+    if (table_sales['Values'] > 55000).any(): # 2. Evaluating the values of sales
+        salesperson = table_sales.loc[table_sales['Values'] > 55000, 'Salesperson'].values[0]
+        values = table_sales.loc[table_sales['Values'] > 55000, 'Values'].values[0]
+        print(f'In month {months} the target was achieved. Salesperson: {salesperson}; Values: {values}.')
