@@ -15,3 +15,4 @@ import pandas as pd
 # 1. Opening the six files in Excel containing the sales values per salesperson.
 list_months = ['january', 'february', 'march', 'april', 'may', 'june']
 table_sale = pd.read_excel('january.xlsx')
+print(table_sale)
