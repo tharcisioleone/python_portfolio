@@ -19,3 +19,4 @@ for months in list_months:
     print(months)
     table_sales = pd.read_excel(f'{months}.xlsx')
     print(table_sales)
+    if (table_sales['Values'] > 55000).any():
