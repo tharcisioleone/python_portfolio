@@ -41,12 +41,6 @@ for months in list_months:
             body=f'In month {months} the target was achieved. Salesperson: {salesperson}. Value: {values}.')
         print(message.sid)
 
-# 3. Sending SMS with the message of target achieving reporting the month, salesperson and value.
 
 
-message = client.messages.create(
-    to="+4917681703460",
-    from_="+19707143233",
-    body="Hello from Python!")
 
-print(message.sid)
