@@ -33,6 +33,7 @@ for months in list_months:
     if (table_sales['Values'] > 55000).any(): # 2. Evaluating the values of sales
         salesperson = table_sales.loc[table_sales['Values'] > 55000, 'Salesperson'].values[0]
         values = table_sales.loc[table_sales['Values'] > 55000, 'Values'].values[0]
+        print(f'In month {months} the target was achieved. Salesperson: {salesperson}. Value: {values}.')
         message = client.messages.create( # 3. Sending SMS with the message of target achieving reporting the month, salesperson and value.
             to="+4917681703460",
             from_="+19707143233",
