@@ -1,7 +1,7 @@
 # Author: Tharcisio Leone #
 # Dataset: Targets of Sales #
 
-## Maschine Learning using openpyxl and twilio.
+## Exercise: Send a SMS when the salesperson achieved the sales target of 55.000 sales per month.
 # 0. Importing Libraries.
 # 1. Opening the six files in Excel containing the sales values per salesperson.
 # 2. Evaluating the values of sales.
